@@ -1,0 +1,17 @@
+{% extends "app_catalogo/base.html" %}
+
+{% block titulo %}Sugerir libro{% endblock %}
+
+{% block contenido %}
+    <h1>Sugerir un libro</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="titulo" value="{{ titulo }}" placeholder="Título del libro que quieres">
+        <button type="submit">Enviar sugerencia</button>
+    </form>
+
+    {% if mensaje %}
+        <div class="mensaje">{{ mensaje }}</div>
+    {% endif %}
+{% endblock %}

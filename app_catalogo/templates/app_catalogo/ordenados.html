@@ -1,0 +1,31 @@
+{% extends "app_catalogo/base.html" %}
+
+{% block titulo %}Libros ordenados{% endblock %}
+
+{% block contenido %}
+    <h1>Libros ordenados por {{ campo|capfirst }}</h1>
+
+    <p>
+        Ordenar por:
+        <a href="{% url 'catalogo:ordenados' 'titulo' %}">
+            {% if campo == 'titulo' %}<strong>Título</strong>{% else %}Título{% endif %}
+        </a> |
+        <a href="{% url 'catalogo:ordenados' 'anio' %}">
+            {% if campo == 'anio' %}<strong>Año</strong>{% else %}Año{% endif %}
+        </a> |
+        <a href="{% url 'catalogo:ordenados' 'autor' %}">
+            {% if campo == 'autor' %}<strong>Autor</strong>{% else %}Autor{% endif %}
+        </a>
+    </p>
+
+    <ul>
+        {% for libro in libros %}
+            <li>
+                <a href="{% url 'catalogo:detalle_libro' libro.id %}">{{ libro.titulo }}</a>
+                ({{ libro.anio }}) — {{ libro.autor }}
+            </li>
+        {% empty %}
+            <li>No hay libros.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
