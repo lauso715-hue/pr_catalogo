@@ -1,12 +1,11 @@
 
 LIBROS = [
-    {"id": 1, "titulo": "El río de las palabras", "autor": "Marta Ríos", "anio": 1998, "genero": "novela", "disponible": True},
-    {"id": 2, "titulo": "Noches de lluvia", "autor": "Julián Ortega", "anio": 2005, "genero": "novela", "disponible": False},
-    {"id": 3, "titulo": "Python desde cero", "autor": "Ana Ruiz", "anio": 2021, "genero": "tecnología", "disponible": True},
-    {"id": 4, "titulo": "El universo en tu bolsillo", "autor": "Carlos Vega", "anio": 2012, "genero": "ciencia", "disponible": True},
-    {"id": 5, "titulo": "Cuentos del Magdalena", "autor": "Marta Ríos", "anio": 1987, "genero": "novela", "disponible": True},
-    {"id": 6, "titulo": "Django paso a paso", "autor": "Laura Méndez", "anio": 2024, "genero": "tecnología", "disponible": False},
-    {"id": 7, "titulo": "It", "autor": "Stephen King", "anio": 1986, "genero": "terror", "disponible": True},
+    {"id": 1, "titulo": "El río de las palabras",     "autor": "Marta Ríos",    "anio": 1998, "genero": "novela",     "disponible": False},
+    {"id": 2, "titulo": "Noches de lluvia",           "autor": "Julián Ortega", "anio": 2005, "genero": "novela",     "disponible": False},
+    {"id": 3, "titulo": "Python desde cero",          "autor": "Ana Ruiz",      "anio": 2021, "genero": "tecnología", "disponible": False},
+    {"id": 4, "titulo": "El universo en tu bolsillo", "autor": "Carlos Vega",   "anio": 2012, "genero": "ciencia",    "disponible": True},
+    {"id": 5, "titulo": "Cuentos del Magdalena",      "autor": "Marta Ríos",    "anio": 1987, "genero": "novela",     "disponible": False},
+    {"id": 6, "titulo": "Django paso a paso",         "autor": "Laura Méndez",  "anio": 2024, "genero": "tecnología", "disponible": True},
 ]
 
 

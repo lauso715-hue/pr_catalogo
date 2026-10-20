@@ -9,7 +9,7 @@ from .datos import LIBROS, buscar_libro
 
 def inicio(request):
     
-    disponibles = sum(1 for libro in LIBROS if libro["disponible"])
+    disponibles = sum(1 for libro in LIBROS if libro["disponible"] == True)
     prestados = len(LIBROS) - disponibles
 
     contexto = {
@@ -22,7 +22,9 @@ def inicio(request):
 
 
 def lista_libros(request):
+
     genero = request.GET.get("genero", "")
+    
     if genero:
         libros = [libro for libro in LIBROS if libro["genero"] == genero]
     else:
@@ -103,3 +105,8 @@ def ordenados(request, campo):
         "app_catalogo/ordenados.html",
         {"libros": libros, "campo": campo},
     )
+
+
+
+
+

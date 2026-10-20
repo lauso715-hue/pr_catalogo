@@ -1,16 +1,18 @@
-{% load static %}
+
+{% load static %}  
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>{% block titulo %}Catálogo{% endblock %}</title>
+    
     <link rel="stylesheet" href="{% static 'app_catalogo/style.css' %}">
 </head>
 <body>
     <nav>
         <a href="{% url 'catalogo:inicio' %}">Inicio</a>
         <a href="{% url 'catalogo:lista_libros' %}">Libros</a>
-        <a href="{% url 'catalogo:ordenados' 'titulo' %}">Ordenar</a>
+        <a href="{% url 'catalogo:ordenados' 'titulo' %}">Ordenar</a>   
         <a href="{% url 'catalogo:autores' %}">Autores</a>
         <a href="{% url 'catalogo:contacto' %}">Contacto</a>
         <a href="{% url 'catalogo:sugerir' %}">Sugerir</a>
@@ -18,7 +20,8 @@
     </nav>
 
     <main>
-        {% block contenido %}{% endblock %}
+        {% block contenido %}
+        {% endblock %}
     </main>
 
     <footer>Proyecto de clase ADSO</footer>
